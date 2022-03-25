@@ -1,0 +1,25 @@
+POST https://api.github.com/graphql
+Content-Type: application/json
+Authorization: Bearer token
+X-REQUEST-Type: GraphQL
+
+query ($name: String!, $owner: String!) {
+    repository(name: $name, owner: $owner) {
+        name
+        fullName: nameWithOwner
+        diskUsage
+        description
+        forkCount
+        stargazers(first: 5) {
+            totalCount
+            nodes {
+                login
+                name
+            }
+        }
+}
+
+{
+    "name": "rxt-portfo-3",
+    "owner": "Bahim22"
+    }

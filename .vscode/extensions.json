@@ -1,0 +1,12 @@
+{
+    "recommendations": [
+        "graphql.vscode-graphql",
+        "humao.rest-client",
+        "aaron-bond.better-comments",
+        "pranaygp.vscode-css-peek",
+        "mikestead.dotenv",
+        "mhutchie.git-graph",
+        "ionutvmi.path-autocomplete",
+        "anseki.vscode-color"
+    ]
+}

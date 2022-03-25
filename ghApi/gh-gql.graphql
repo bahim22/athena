@@ -1,0 +1,103 @@
+{
+  viewer {
+    pinnedItems(first: 7) {
+      edges {
+        node {
+          ... on Repository {
+            id
+            name
+            vulnerabilityAlerts(last: 10) {
+              edges {
+                node {
+                  number
+                  dependabotUpdate {
+                    error {
+                      errorType
+                      title
+                    }
+                  }
+                  createdAt
+                  state
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+query {
+  viewer {
+    login
+  }
+  rateLimit {
+    limit
+    cost
+    remaining
+    resetAt
+  }
+}
+
+{
+  repository(owner: "bahim22", followRenames: true, name: "waves") {
+    createdAt
+    description
+    updatedAt
+  }
+  viewer {
+    location
+    pinnedItems(first: 7) {
+      edges {
+        node {
+          ... on Repository {
+            id
+            name
+          }
+        }
+      }
+    }
+  }
+}
+
+{
+  repository(name: "waves", owner: "bahim22") {
+    owner {
+      id
+    }
+    name
+    languages(first: 10, orderBy: { field: SIZE, direction: DESC }) {
+      edges {
+        ...LanguageEdgeFragment
+        node {
+          id
+          color
+          name
+        }
+        size
+      }
+      totalCount
+      totalSize
+      nodes {
+        name
+        id
+        color
+      }
+    }
+  }
+}
+
+fragment LanguageEdgeFragment on LanguageEdge {
+  node {
+    id
+    name
+    color
+  }
+}
+
+{
+  "name": "waves",
+  "owner": "bahim22"
+}
