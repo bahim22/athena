@@ -10,6 +10,10 @@ lerna-debug.log*
 dev.env
 config.env
 .mongoose/config/config.env
+/protectDocs/**
+**protectDocs/**.[.json,.md,.js]**
+athena/protectDocs/**
+
 .env.development
 .env.production
 athena.code-workspace

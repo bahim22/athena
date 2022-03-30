@@ -3,6 +3,8 @@ const Db = process.env.ATLAS_URI
 const client = new MongoClient(Db, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
+  monitorCommands: true,
+  compressors: "zlib",
 })
 
 var _db;
@@ -13,8 +15,8 @@ module.exports = {
       // Verify we got a good 'db' object
       if (db)
       {
-        _db = db.db("react-todo")
-        console.log("MongoDB connection est bien")
+        _db = db.db("todoTs")
+        console.log("MongoClient est bien")
       }
       return callback(err);
       })

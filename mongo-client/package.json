@@ -1,0 +1,117 @@
+{
+  "name": "athena-server",
+  "version": "3.1.0",
+  "description": "mongodb server with node/express and graphql ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "node index.js"
+  },
+  "keywords": [],
+  "author": "Hima Dionysus Balde",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "graphql": "^16.3.0",
+    "mongodb": "^4.4.1"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.0",
+    "nodemon": "^2.0.15"
+  },
+  "engines": {
+    "node": "^10.12.0 || >=12.0.0"
+  },
+  "eslintConfig": {
+    "extends": "airbnb",
+    "env": {
+      "browser": true,
+      "node": true,
+      "es6": true,
+      "jest": true,
+      "module": true,
+      "mongo": true,
+      "mongoose": true,
+      "graphql": true
+    }
+  },
+  "prettier": {
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5",
+    "printWidth": 120,
+    "tabWidth": 4,
+    "useTabs": true,
+    "bracketSpacing": true,
+    "jsxBracketSameLine": false,
+    "jsxSingleQuote": true
+  },
+  "eslintIgnore": [
+    "node_modules",
+    "dist",
+    "build",
+    "package.json",
+    "package-lock.json"
+  ],
+  "eslintPlugin": [
+    "prettier",
+    "react",
+    "import",
+    "jsx-a11y",
+    "react-hooks",
+    "graphql"
+  ],
+  "eslintRules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "arrowParens": "avoid",
+        "bracketSpacing": true,
+        "endOfLine": "auto",
+        "htmlWhitespaceSensitivity": "css",
+        "insertPragma": false,
+        "jsxBracketSameLine": false,
+        "jsxSingleQuote": true,
+        "printWidth": 120,
+        "proseWrap": "preserve",
+        "requirePragma": false,
+        "semi": false,
+        "singleQuote": true,
+        "tabWidth": 2,
+        "trailingComma": "es5",
+        "useTabs": true
+      }
+    ]
+  },
+  "prettierPlugins": [
+    "prettier/prettier",
+    "prettier/react",
+    "prettier/@typescript-eslint",
+    "prettier/eslint-plugin-prettier",
+    "prettier/eslint-plugin-react",
+    "prettier/babel"
+  ],
+  "prettierIgnore": [
+    "node_modules",
+    "dist",
+    "build",
+    "package-lock.json"
+  ],
+  "files": [
+    "index.js",
+    "client",
+    "server",
+    "src/**/*.js",
+    "mongo/package.json",
+    "mongoose/package.json"
+  ],
+  "type": "commonjs",
+  "repository": {
+    "type": "git",
+    "url": "git+",
+    "directory": "mongo-client",
+    "host": "github.com",
+    "repo": "athena-server"
+  }
+}
